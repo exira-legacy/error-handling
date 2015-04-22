@@ -1,0 +1,21 @@
+type project
+owners
+    exira
+authors
+    exira
+projectUrl
+    http://github.com/exira/error-handling
+iconUrl
+    https://raw.githubusercontent.com/exira/error-handling/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/exira/error-handling/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    f# rop
+summary
+    F# Railway Oriented Programming Helpers
+description
+    F# Helpers to facilitate with the Railway Oriented Programming approach.
