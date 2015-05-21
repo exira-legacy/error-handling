@@ -50,12 +50,6 @@
     <tbody>
         <tr>
           <td class="type-name">
-            <a href="exira-errorhandling-errorstatebuilder.html">ErrorStateBuilder</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
             <a href="exira-errorhandling-result-2.html">Result<'TSuccess, 'TFailure></a>
           </td>
           <td class="xmldoc"></td>
@@ -75,9 +69,68 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
-            bind f
+            ( &lt;!&gt; ) 
           </code>
           <div class="tip" id="1">
+            <strong>Signature:</strong> (&#39;?6166 -&gt; &#39;?6167) -&gt; Result&lt;&#39;?6166,&#39;?6168 list&gt; -&gt; Result&lt;&#39;?6167,&#39;?6168 list&gt;<br />
+                          <strong>Type parameters:</strong> '?6166, '?6167, '?6168          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L68-68" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>infix version of lift</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            ( &lt;*&gt; ) 
+          </code>
+          <div class="tip" id="2">
+            <strong>Signature:</strong> Result&lt;(&#39;?6162 -&gt; &#39;?6163),&#39;?6164 list&gt; -&gt; Result&lt;&#39;?6162,&#39;?6164 list&gt; -&gt; Result&lt;&#39;?6163,&#39;?6164 list&gt;<br />
+                          <strong>Type parameters:</strong> '?6162, '?6163, '?6164          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L65-65" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>infix version of apply</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            apply f result
+          </code>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> f:Result&lt;(&#39;?6154 -&gt; &#39;?6155),&#39;?6156 list&gt; -&gt; result:Result&lt;&#39;?6154,&#39;?6156 list&gt; -&gt; Result&lt;&#39;?6155,&#39;?6156 list&gt;<br />
+                          <strong>Type parameters:</strong> '?6154, '?6155, '?6156          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L51-51" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>given a function wrapped in a result
+and a value wrapped in a result
+apply the function to the value only if both are Success</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
+            bind f
+          </code>
+          <div class="tip" id="4">
             <strong>Signature:</strong> f:(&#39;?6132 -&gt; Result&lt;&#39;?6133,&#39;?6134&gt;) -&gt; Result&lt;&#39;?6132,&#39;?6134&gt; -&gt; Result&lt;&#39;?6133,&#39;?6134&gt;<br />
                           <strong>Type parameters:</strong> '?6132, '?6133, '?6134          </div>
         </td>
@@ -92,10 +145,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
             bindAsync f
           </code>
-          <div class="tip" id="2">
+          <div class="tip" id="5">
             <strong>Signature:</strong> f:(&#39;?6146 -&gt; Async&lt;Result&lt;&#39;?6147,&#39;?6148&gt;&gt;) -&gt; Result&lt;&#39;?6146,&#39;?6148&gt; -&gt; Async&lt;Result&lt;&#39;?6147,&#39;?6148&gt;&gt;<br />
                           <strong>Type parameters:</strong> '?6146, '?6147, '?6148          </div>
         </td>
@@ -110,10 +163,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
             either (...)
           </code>
-          <div class="tip" id="3">
+          <div class="tip" id="6">
             <strong>Signature:</strong> successFunc:(&#39;?6128 -&gt; &#39;?6129) -&gt; failureFunc:(&#39;?6130 -&gt; &#39;?6129) -&gt; twoTrackInput:Result&lt;&#39;?6128,&#39;?6130&gt; -&gt; &#39;?6129<br />
                           <strong>Type parameters:</strong> '?6128, '?6129, '?6130          </div>
         </td>
@@ -128,28 +181,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
-            errorState 
-          </code>
-          <div class="tip" id="4">
-            <strong>Signature:</strong> ErrorStateBuilder<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L78-78" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
             fail x
           </code>
-          <div class="tip" id="5">
+          <div class="tip" id="7">
             <strong>Signature:</strong> x:&#39;?6122 -&gt; Result&lt;&#39;?6123,&#39;?6122&gt;<br />
                           <strong>Type parameters:</strong> '?6122, '?6123          </div>
         </td>
@@ -164,10 +199,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
             failAsync x
           </code>
-          <div class="tip" id="6">
+          <div class="tip" id="8">
             <strong>Signature:</strong> x:&#39;?6125 -&gt; Async&lt;Result&lt;&#39;?6126,&#39;?6125&gt;&gt;<br />
                           <strong>Type parameters:</strong> '?6125, '?6126          </div>
         </td>
@@ -182,10 +217,30 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            lift f result
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> f:(&#39;?6158 -&gt; &#39;?6159) -&gt; result:Result&lt;&#39;?6158,&#39;?6160 list&gt; -&gt; Result&lt;&#39;?6159,&#39;?6160 list&gt;<br />
+                          <strong>Type parameters:</strong> '?6158, '?6159, '?6160          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L60-60" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>given a function that transforms a value
+apply it only if the result is on the Success branch</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
             map f
           </code>
-          <div class="tip" id="7">
+          <div class="tip" id="10">
             <strong>Signature:</strong> f:(&#39;?6140 -&gt; &#39;?6141) -&gt; Result&lt;&#39;?6140,&#39;?6142&gt; -&gt; Result&lt;&#39;?6141,&#39;?6142&gt;<br />
                           <strong>Type parameters:</strong> '?6140, '?6141, '?6142          </div>
         </td>
@@ -200,10 +255,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
             mapMessages f result
           </code>
-          <div class="tip" id="8">
+          <div class="tip" id="11">
             <strong>Signature:</strong> f:(&#39;?6150 -&gt; &#39;?6151) -&gt; result:Result&lt;&#39;?6152,&#39;?6150 list&gt; -&gt; Result&lt;&#39;?6152,&#39;?6151 list&gt;<br />
                           <strong>Type parameters:</strong> '?6150, '?6151, '?6152          </div>
         </td>
@@ -218,10 +273,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
             succeed x
           </code>
-          <div class="tip" id="9">
+          <div class="tip" id="12">
             <strong>Signature:</strong> x:&#39;?6119 -&gt; Result&lt;&#39;?6119,&#39;?6120&gt;<br />
                           <strong>Type parameters:</strong> '?6119, '?6120          </div>
         </td>
@@ -236,10 +291,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
             switch f
           </code>
-          <div class="tip" id="10">
+          <div class="tip" id="13">
             <strong>Signature:</strong> f:(&#39;?6136 -&gt; &#39;?6137) -&gt; &#39;?6136 -&gt; Result&lt;&#39;?6137,&#39;?6138&gt;<br />
                           <strong>Type parameters:</strong> '?6136, '?6137, '?6138          </div>
         </td>
@@ -254,10 +309,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
             tee f x
           </code>
-          <div class="tip" id="11">
+          <div class="tip" id="14">
             <strong>Signature:</strong> f:(&#39;?6144 -&gt; unit) -&gt; x:&#39;?6144 -&gt; &#39;?6144<br />
                           <strong>Type parameters:</strong> '?6144          </div>
         </td>
