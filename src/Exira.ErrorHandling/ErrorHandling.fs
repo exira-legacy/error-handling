@@ -5,40 +5,52 @@ module ErrorHandling =
         | Success of 'TSuccess
         | Failure of 'TFailure
 
-    /// convert a single value into a two-track result
+    /// Convert a single value into a two-track result.
     let succeed x =
         Success x
 
-    /// convert a single value into a two-track result
+    /// Convert a single value into a two-track result.
     let fail x =
         Failure x
 
-    /// convert a single value into a two-track async result
+    /// Convert a single value into a two-track async result.
     let failAsync x =
         async { return Failure x }
 
-    /// apply either a success function or failure function
+    /// Apply either a success function or failure function.
     let either successFunc failureFunc twoTrackInput =
         match twoTrackInput with
         | Success s -> successFunc s
         | Failure f -> failureFunc f
 
-    /// convert a switch function into a two-track function
+    /// Convert a switch function into a two-track function.
     let bind f = either f fail
 
-    /// convert a one-track function into a switch
+    /// Convert a one-track function into a switch.
     let switch f = f >> succeed
 
-    /// convert a one-track function into a two-track function
+    /// Convert a one-track function into a two-track function.
     let map f = either (f >> succeed) fail
 
-    /// convert a dead-end function into a one-track function
+    /// Convert a dead-end function into a one-track function.
     let tee f x = f x; x
 
-    /// convert a switch function into a two-track function
+    /// Convert a switch function into a two-track function.
     let bindAsync f = either f failAsync
 
-    /// map the messages to a different error type
+    /// Shorthand function to determine if a result is a Success, can be used in e.g. List.exists isSuccess.
+    let isSuccess x = either (fun _ -> true) (fun _ -> false) x
+
+    /// Shorthand function to determine if a result is a Failure, can be used in e.g. List.exists isFailure.
+    let isFailure x = either (fun _ -> false) (fun _ -> true) x
+
+    /// Shorthand function to select Success values, can be used in e.g. List.choose successOnly.
+    let successOnly x = either (fun x -> Some x) (fun _ -> None) x
+
+    /// Shorthand function to select Failure values, can be used in e.g. List.choose failureOnly.
+    let failureOnly x = either (fun _ -> None) (fun x -> Some x) x
+
+    /// Map the messages to a different error type.
     let mapMessages f result =
         match result with
         | Success x -> succeed x
@@ -56,16 +68,16 @@ module ErrorHandling =
         | Failure a', Failure b' -> fail (a' @ b')
         | Success f, Success b' -> succeed (f b')
 
-    /// given a function that transforms a value
-    /// apply it only if the result is on the Success branch
+    /// Given a function that transforms a value,
+    /// apply it only if the result is on the Success branch.
     let lift f result =
         let f' =  succeed f
         apply f' result
 
-    /// infix version of apply
+    /// Infix version of apply.
     let (<*>) = apply
 
-    /// infix version of lift
+    /// iInfix version of lift.
     let (<!>) = lift
 
     let private constructionSuccess value =
@@ -74,8 +86,8 @@ module ErrorHandling =
     let private constructionFailure value =
         fail [value]
 
-    /// create with continuation
-    /// assumes ctor looks like: let createWithCont success failure value =
+    /// Create with continuation.
+    /// Assumes ctor looks like: let createWithCont success failure value =
     let construct ctor value =
         value
         |> ctor constructionSuccess constructionFailure
