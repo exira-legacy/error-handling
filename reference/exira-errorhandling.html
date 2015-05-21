@@ -76,7 +76,7 @@
                           <strong>Type parameters:</strong> '?6166, '?6167, '?6168          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L68-68" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L69-69" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -95,7 +95,7 @@
                           <strong>Type parameters:</strong> '?6162, '?6163, '?6164          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L65-65" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L66-66" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -114,7 +114,7 @@
                           <strong>Type parameters:</strong> '?6154, '?6155, '?6156          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L51-51" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L52-52" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -135,11 +135,12 @@ apply the function to the value only if both are Success</p>
                           <strong>Type parameters:</strong> '?6132, '?6133, '?6134          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L26-26" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L27-27" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>convert a switch function into a two-track function</p>
+
         </td>
       </tr>
       <tr>
@@ -153,38 +154,60 @@ apply the function to the value only if both are Success</p>
                           <strong>Type parameters:</strong> '?6146, '?6147, '?6148          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L38-38" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L39-39" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>convert a switch function into a two-track function</p>
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
-            either (...)
+            construct ctor value
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong> successFunc:(&#39;?6128 -&gt; &#39;?6129) -&gt; failureFunc:(&#39;?6130 -&gt; &#39;?6129) -&gt; twoTrackInput:Result&lt;&#39;?6128,&#39;?6130&gt; -&gt; &#39;?6129<br />
-                          <strong>Type parameters:</strong> '?6128, '?6129, '?6130          </div>
+            <strong>Signature:</strong> ctor:((&#39;?6176 -&gt; Result&lt;&#39;?6176,&#39;?6177&gt;) -&gt; (&#39;?6178 -&gt; Result&lt;&#39;?6179,&#39;?6178 list&gt;) -&gt; &#39;?6180 -&gt; &#39;?6181) -&gt; value:&#39;?6180 -&gt; &#39;?6181<br />
+                          <strong>Type parameters:</strong> '?6176, '?6177, '?6178, '?6179, '?6180, '?6181          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L20-20" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L79-79" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>create with continuation
+assumes ctor looks like: let createWithCont success failure value =</p>
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
-            fail x
+            either (...)
           </code>
           <div class="tip" id="7">
+            <strong>Signature:</strong> successFunc:(&#39;?6128 -&gt; &#39;?6129) -&gt; failureFunc:(&#39;?6130 -&gt; &#39;?6129) -&gt; twoTrackInput:Result&lt;&#39;?6128,&#39;?6130&gt; -&gt; &#39;?6129<br />
+                          <strong>Type parameters:</strong> '?6128, '?6129, '?6130          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L21-21" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>apply either a success function or failure function</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            fail x
+          </code>
+          <div class="tip" id="8">
             <strong>Signature:</strong> x:&#39;?6122 -&gt; Result&lt;&#39;?6123,&#39;?6122&gt;<br />
                           <strong>Type parameters:</strong> '?6122, '?6123          </div>
         </td>
@@ -193,39 +216,41 @@ apply the function to the value only if both are Success</p>
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+          <p>convert a single value into a two-track result</p>
 
-          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
-            failAsync x
-          </code>
-          <div class="tip" id="8">
-            <strong>Signature:</strong> x:&#39;?6125 -&gt; Async&lt;Result&lt;&#39;?6126,&#39;?6125&gt;&gt;<br />
-                          <strong>Type parameters:</strong> '?6125, '?6126          </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L16-16" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
-            lift f result
+            failAsync x
           </code>
           <div class="tip" id="9">
+            <strong>Signature:</strong> x:&#39;?6125 -&gt; Async&lt;Result&lt;&#39;?6126,&#39;?6125&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?6125, '?6126          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L17-17" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>convert a single value into a two-track async result</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            lift f result
+          </code>
+          <div class="tip" id="10">
             <strong>Signature:</strong> f:(&#39;?6158 -&gt; &#39;?6159) -&gt; result:Result&lt;&#39;?6158,&#39;?6160 list&gt; -&gt; Result&lt;&#39;?6159,&#39;?6160 list&gt;<br />
                           <strong>Type parameters:</strong> '?6158, '?6159, '?6160          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L60-60" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L61-61" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -237,46 +262,48 @@ apply it only if the result is on the Success branch</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
             map f
           </code>
-          <div class="tip" id="10">
+          <div class="tip" id="11">
             <strong>Signature:</strong> f:(&#39;?6140 -&gt; &#39;?6141) -&gt; Result&lt;&#39;?6140,&#39;?6142&gt; -&gt; Result&lt;&#39;?6141,&#39;?6142&gt;<br />
                           <strong>Type parameters:</strong> '?6140, '?6141, '?6142          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L32-32" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L33-33" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+          <p>convert a one-track function into a two-track function</p>
 
-          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
-            mapMessages f result
-          </code>
-          <div class="tip" id="11">
-            <strong>Signature:</strong> f:(&#39;?6150 -&gt; &#39;?6151) -&gt; result:Result&lt;&#39;?6152,&#39;?6150 list&gt; -&gt; Result&lt;&#39;?6152,&#39;?6151 list&gt;<br />
-                          <strong>Type parameters:</strong> '?6150, '?6151, '?6152          </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L41-41" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            succeed x
+            mapMessages f result
           </code>
           <div class="tip" id="12">
+            <strong>Signature:</strong> f:(&#39;?6150 -&gt; &#39;?6151) -&gt; result:Result&lt;&#39;?6152,&#39;?6150 list&gt; -&gt; Result&lt;&#39;?6152,&#39;?6151 list&gt;<br />
+                          <strong>Type parameters:</strong> '?6150, '?6151, '?6152          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L42-42" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>map the messages to a different error type</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            succeed x
+          </code>
+          <div class="tip" id="13">
             <strong>Signature:</strong> x:&#39;?6119 -&gt; Result&lt;&#39;?6119,&#39;?6120&gt;<br />
                           <strong>Type parameters:</strong> '?6119, '?6120          </div>
         </td>
@@ -285,43 +312,46 @@ apply it only if the result is on the Success branch</p>
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
+          <p>convert a single value into a two-track result</p>
 
-          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            switch f
-          </code>
-          <div class="tip" id="13">
-            <strong>Signature:</strong> f:(&#39;?6136 -&gt; &#39;?6137) -&gt; &#39;?6136 -&gt; Result&lt;&#39;?6137,&#39;?6138&gt;<br />
-                          <strong>Type parameters:</strong> '?6136, '?6137, '?6138          </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L29-29" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
-            tee f x
+            switch f
           </code>
           <div class="tip" id="14">
+            <strong>Signature:</strong> f:(&#39;?6136 -&gt; &#39;?6137) -&gt; &#39;?6136 -&gt; Result&lt;&#39;?6137,&#39;?6138&gt;<br />
+                          <strong>Type parameters:</strong> '?6136, '?6137, '?6138          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L30-30" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>convert a one-track function into a switch</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+            tee f x
+          </code>
+          <div class="tip" id="15">
             <strong>Signature:</strong> f:(&#39;?6144 -&gt; unit) -&gt; x:&#39;?6144 -&gt; &#39;?6144<br />
                           <strong>Type parameters:</strong> '?6144          </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L35-35" class="github-link">
+            <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L36-36" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>convert a dead-end function into a one-track function</p>
+
         </td>
       </tr>
     </tbody>
