@@ -45,34 +45,24 @@ module ErrorHandling =
             let errors' = List.map f errors
             fail errors'
 
-    // TODO: Can get rid of this when we refactor applicative validation
-    type ErrorStateBuilder() =
-        member this.Return(x) = Success x
-        member this.ReturnFrom(m) = m
+    /// given a function wrapped in a result
+    /// and a value wrapped in a result
+    /// apply the function to the value only if both are Success
+    let apply f result =
+        match f, result with
+        | Failure a', Success b' -> fail a'
+        | Success a', Failure b' -> fail b'
+        | Failure a', Failure b' -> fail (a' @ b')
+        | Success f, Success b' -> succeed (f b')
 
-        member this.Bind((m: Result<'a, 'error list>), f) =
-            match m with
-            | Failure a' -> Failure a'
-            | Success a' -> f a'
+    /// given a function that transforms a value
+    /// apply it only if the result is on the Success branch
+    let lift f result =
+        let f' =  succeed f
+        apply f' result
 
-        member this.Bind((m: Result<'a, 'error list> * Result<'b, 'error  list>), f) =
-            match m with
-            | Failure a', Success b' -> Failure a'
-            | Success a', Failure b' -> Failure b'
-            | Failure a', Failure b' -> Failure (a' @ b')
-            | Success a', Success b' -> f (a', b')
+    /// infix version of apply
+    let (<*>) = apply
 
-        member this.Bind((m: Result<'a, 'error list> * Result<'b, 'error list> * Result<'c, 'error list>), f) =
-            match m with
-            | Failure a', Failure b', Failure c' -> Failure (a' @ b' @ c')
-            | Failure a', Failure b', Success c' -> Failure (a' @ b')
-            | Failure a', Success b', Failure c' -> Failure (a' @ c')
-            | Failure a', Success b', Success c' -> Failure a'
-            | Success a', Failure b', Failure c' -> Failure (b' @ c')
-            | Success a', Failure b', Success c' -> Failure b'
-            | Success a', Success b', Failure c' -> Failure c'
-            | Success a', Success b', Success c' -> f (a', b', c')
-
-        member this.Delay(f) = f()
-
-    let errorState = new ErrorStateBuilder()
+    /// infix version of lift
+    let (<!>) = lift
