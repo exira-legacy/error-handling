@@ -1,6 +1,8 @@
 namespace Exira
 
+/// F# Helpers to facilitate with the Railway Oriented Programming approach.
 module ErrorHandling =
+    /// Two-track result type.
     type Result<'TSuccess, 'TFailure> =
         | Success of 'TSuccess
         | Failure of 'TFailure
@@ -58,9 +60,9 @@ module ErrorHandling =
             let errors' = List.map f errors
             fail errors'
 
-    /// given a function wrapped in a result
+    /// Given a function wrapped in a result
     /// and a value wrapped in a result
-    /// apply the function to the value only if both are Success
+    /// apply the function to the value only if both are Success.
     let apply f result =
         match f, result with
         | Failure a', Success b' -> fail a'
@@ -77,7 +79,7 @@ module ErrorHandling =
     /// Infix version of apply.
     let (<*>) = apply
 
-    /// iInfix version of lift.
+    /// Infix version of lift.
     let (<!>) = lift
 
     let private constructionSuccess value =
