@@ -3,3 +3,7 @@
 ## Exira.ErrorHandling
 
 F# Helpers to facilitate with the Railway Oriented Programming approach
+
+## Cloning
+
+```git clone git@github.com:exira/error-handling.git -c core.autocrlf=input```
