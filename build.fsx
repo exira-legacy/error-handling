@@ -93,8 +93,9 @@ Target "AssemblyInfo" (fun _ ->
         [ Attribute.Title (projectName)
           Attribute.Product project
           Attribute.Description summary
-          Attribute.Version release.AssemblyVersion
-          Attribute.FileVersion release.AssemblyVersion ]
+          Attribute.Version (sprintf "%s.%s" release.AssemblyVersion buildNumber)
+          Attribute.FileVersion (sprintf "%s.%s" release.AssemblyVersion buildNumber)
+          Attribute.Metadata("githash", commitHash) ]
 
     let getProjectDetails projectPath =
         let projectName = System.IO.Path.GetFileNameWithoutExtension(projectPath)
