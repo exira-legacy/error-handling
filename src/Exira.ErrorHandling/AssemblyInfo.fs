@@ -4,10 +4,10 @@ open System.Reflection
 [<assembly: AssemblyTitleAttribute("Exira.ErrorHandling")>]
 [<assembly: AssemblyProductAttribute("Exira.ErrorHandling")>]
 [<assembly: AssemblyDescriptionAttribute("F# Railway Oriented Programming Helpers")>]
-[<assembly: AssemblyVersionAttribute("0.1.0")>]
-[<assembly: AssemblyFileVersionAttribute("0.1.0")>]
-[<assembly: AssemblyMetadataAttribute("githash","49ccc0c05ed6e75cc545e368ff1c64b04ca7ea4b")>]
+[<assembly: AssemblyVersionAttribute("0.1.25")>]
+[<assembly: AssemblyFileVersionAttribute("0.1.25")>]
+[<assembly: AssemblyMetadataAttribute("githash","5b31a1c9f45d38c31212ecf82529f79183ee9adc")>]
 do ()
 
 module internal AssemblyVersionInformation =
-    let [<Literal>] Version = "0.1.0"
+    let [<Literal>] Version = "0.1.25"
