@@ -207,9 +207,10 @@ Target "NuGet" (fun _ ->
 )
 
 Target "PublishNuget" (fun _ ->
-    Paket.Push(fun p ->
-        { p with
-            WorkingDir = "bin" })
+    ()
+    //Paket.Push(fun p ->
+    //    { p with
+    //        WorkingDir = "bin" })
 )
 
 
