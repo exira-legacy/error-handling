@@ -336,6 +336,8 @@ Target "ReleaseDocs" (fun _ ->
 open Octokit
 
 Target "Release" (fun _ ->
+    log "##teamcity[progressStart 'Release']"
+
     StageAll ""
     Git.Commit.Commit "" (sprintf "Bump version to %s.%s" release.NugetVersion buildNumber)
     Branches.push ""
@@ -349,6 +351,8 @@ Target "Release" (fun _ ->
     // TODO: |> uploadFile "PATH_TO_FILE"
     |> releaseDraft
     |> Async.RunSynchronously
+
+    log "##teamcity[progressFinish 'Release']"
 )
 
 Target "BuildPackage" DoNothing
