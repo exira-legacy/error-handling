@@ -1,0 +1,2 @@
+SET SSH_AUTH_SOCK=/tmp/ssh-xS0Gvv4foaPw/agent.3772
+ SET SSH_AGENT_PID=2288
