@@ -19,3 +19,8 @@ summary
     F# Railway Oriented Programming Helpers
 description
     F# Helpers to facilitate with the Railway Oriented Programming approach.
+files
+    bin/Release/net45/Exira.ErrorHandling.* ==> lib/net45/
+    bin/Release/net452/Exira.ErrorHandling.* ==> lib/net452/
+    bin/Release/net46/Exira.ErrorHandling.* ==> lib/net46/
+    bin/Release/net461/Exira.ErrorHandling.* ==> lib/net461/
