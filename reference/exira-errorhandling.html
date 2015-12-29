@@ -37,8 +37,13 @@
 
 
 <h1>ErrorHandling</h1>
+<p>
+  <span>Namespace: Exira</span><br />
+</p>
 <div class="xmldoc">
 <p>F# Helpers to facilitate with the Railway Oriented Programming approach.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +59,8 @@
             <a href="exira-errorhandling-result-2.html">Result<'TSuccess, 'TFailure></a>
           </td>
           <td class="xmldoc"><p>Two-track result type.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -74,8 +81,8 @@
             ( &lt;!&gt; ) 
           </code>
           <div class="tip" id="1">
-            <strong>Signature:</strong> (&#39;?6631 -&gt; &#39;?6632) -&gt; Result&lt;&#39;?6631,&#39;?6633 list&gt; -&gt; Result&lt;&#39;?6632,&#39;?6633 list&gt;<br />
-                          <strong>Type parameters:</strong> '?6631, '?6632, '?6633          </div>
+            <strong>Signature:</strong> (&#39;?7249 -&gt; &#39;?7250) -&gt; Result&lt;&#39;?7249,&#39;?7251 list&gt; -&gt; Result&lt;&#39;?7250,&#39;?7251 list&gt;<br />
+                          <strong>Type parameters:</strong> '?7249, '?7250, '?7251          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L83-83" class="github-link">
@@ -83,6 +90,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Infix version of lift.</p>
+
+
 
         </td>
       </tr>
@@ -93,8 +102,8 @@
             ( &lt;*&gt; ) 
           </code>
           <div class="tip" id="2">
-            <strong>Signature:</strong> Result&lt;(&#39;?6627 -&gt; &#39;?6628),&#39;?6629 list&gt; -&gt; Result&lt;&#39;?6627,&#39;?6629 list&gt; -&gt; Result&lt;&#39;?6628,&#39;?6629 list&gt;<br />
-                          <strong>Type parameters:</strong> '?6627, '?6628, '?6629          </div>
+            <strong>Signature:</strong> Result&lt;(&#39;?7245 -&gt; &#39;?7246),&#39;?7247 list&gt; -&gt; Result&lt;&#39;?7245,&#39;?7247 list&gt; -&gt; Result&lt;&#39;?7246,&#39;?7247 list&gt;<br />
+                          <strong>Type parameters:</strong> '?7245, '?7246, '?7247          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L80-80" class="github-link">
@@ -102,6 +111,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Infix version of apply.</p>
+
+
 
         </td>
       </tr>
@@ -112,8 +123,8 @@
             apply f result
           </code>
           <div class="tip" id="3">
-            <strong>Signature:</strong> f:Result&lt;(&#39;?6619 -&gt; &#39;?6620),&#39;?6621 list&gt; -&gt; result:Result&lt;&#39;?6619,&#39;?6621 list&gt; -&gt; Result&lt;&#39;?6620,&#39;?6621 list&gt;<br />
-                          <strong>Type parameters:</strong> '?6619, '?6620, '?6621          </div>
+            <strong>Signature:</strong> f:Result&lt;(&#39;?7237 -&gt; &#39;?7238),&#39;?7239 list&gt; -&gt; result:Result&lt;&#39;?7237,&#39;?7239 list&gt; -&gt; Result&lt;&#39;?7238,&#39;?7239 list&gt;<br />
+                          <strong>Type parameters:</strong> '?7237, '?7238, '?7239          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L66-66" class="github-link">
@@ -124,6 +135,8 @@
 and a value wrapped in a result
 apply the function to the value only if both are Success.</p>
 
+
+
         </td>
       </tr>
       <tr>
@@ -133,8 +146,8 @@ apply the function to the value only if both are Success.</p>
             bind f
           </code>
           <div class="tip" id="4">
-            <strong>Signature:</strong> f:(&#39;?6585 -&gt; Result&lt;&#39;?6586,&#39;?6587&gt;) -&gt; Result&lt;&#39;?6585,&#39;?6587&gt; -&gt; Result&lt;&#39;?6586,&#39;?6587&gt;<br />
-                          <strong>Type parameters:</strong> '?6585, '?6586, '?6587          </div>
+            <strong>Signature:</strong> f:(&#39;?7203 -&gt; Result&lt;&#39;?7204,&#39;?7205&gt;) -&gt; Result&lt;&#39;?7203,&#39;?7205&gt; -&gt; Result&lt;&#39;?7204,&#39;?7205&gt;<br />
+                          <strong>Type parameters:</strong> '?7203, '?7204, '?7205          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L29-29" class="github-link">
@@ -142,6 +155,8 @@ apply the function to the value only if both are Success.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a switch function into a two-track function.</p>
+
+
 
         </td>
       </tr>
@@ -152,8 +167,8 @@ apply the function to the value only if both are Success.</p>
             bindAsync f
           </code>
           <div class="tip" id="5">
-            <strong>Signature:</strong> f:(&#39;?6599 -&gt; Async&lt;Result&lt;&#39;?6600,&#39;?6601&gt;&gt;) -&gt; Result&lt;&#39;?6599,&#39;?6601&gt; -&gt; Async&lt;Result&lt;&#39;?6600,&#39;?6601&gt;&gt;<br />
-                          <strong>Type parameters:</strong> '?6599, '?6600, '?6601          </div>
+            <strong>Signature:</strong> f:(&#39;?7217 -&gt; Async&lt;Result&lt;&#39;?7218,&#39;?7219&gt;&gt;) -&gt; Result&lt;&#39;?7217,&#39;?7219&gt; -&gt; Async&lt;Result&lt;&#39;?7218,&#39;?7219&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?7217, '?7218, '?7219          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L41-41" class="github-link">
@@ -161,6 +176,8 @@ apply the function to the value only if both are Success.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a switch function into a two-track function.</p>
+
+
 
         </td>
       </tr>
@@ -171,8 +188,8 @@ apply the function to the value only if both are Success.</p>
             construct ctor value
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong> ctor:((&#39;?6641 -&gt; Result&lt;&#39;?6641,&#39;?6642&gt;) -&gt; (&#39;?6643 -&gt; Result&lt;&#39;?6644,&#39;?6643 list&gt;) -&gt; &#39;?6645 -&gt; &#39;?6646) -&gt; value:&#39;?6645 -&gt; &#39;?6646<br />
-                          <strong>Type parameters:</strong> '?6641, '?6642, '?6643, '?6644, '?6645, '?6646          </div>
+            <strong>Signature:</strong> ctor:((&#39;?7259 -&gt; Result&lt;&#39;?7259,&#39;?7260&gt;) -&gt; (&#39;?7261 -&gt; Result&lt;&#39;?7262,&#39;?7261 list&gt;) -&gt; &#39;?7263 -&gt; &#39;?7264) -&gt; value:&#39;?7263 -&gt; &#39;?7264<br />
+                          <strong>Type parameters:</strong> '?7259, '?7260, '?7261, '?7262, '?7263, '?7264          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L93-93" class="github-link">
@@ -181,6 +198,8 @@ apply the function to the value only if both are Success.</p>
             </a>
           <p>Create with continuation.
 Assumes ctor looks like: let createWithCont success failure value =</p>
+
+
 
         </td>
       </tr>
@@ -191,8 +210,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             either (...)
           </code>
           <div class="tip" id="7">
-            <strong>Signature:</strong> successFunc:(&#39;?6581 -&gt; &#39;?6582) -&gt; failureFunc:(&#39;?6583 -&gt; &#39;?6582) -&gt; twoTrackInput:Result&lt;&#39;?6581,&#39;?6583&gt; -&gt; &#39;?6582<br />
-                          <strong>Type parameters:</strong> '?6581, '?6582, '?6583          </div>
+            <strong>Signature:</strong> successFunc:(&#39;?7199 -&gt; &#39;?7200) -&gt; failureFunc:(&#39;?7201 -&gt; &#39;?7200) -&gt; twoTrackInput:Result&lt;&#39;?7199,&#39;?7201&gt; -&gt; &#39;?7200<br />
+                          <strong>Type parameters:</strong> '?7199, '?7200, '?7201          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L23-23" class="github-link">
@@ -200,6 +219,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Apply either a success function or failure function.</p>
+
+
 
         </td>
       </tr>
@@ -210,8 +231,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             fail x
           </code>
           <div class="tip" id="8">
-            <strong>Signature:</strong> x:&#39;?6575 -&gt; Result&lt;&#39;?6576,&#39;?6575&gt;<br />
-                          <strong>Type parameters:</strong> '?6575, '?6576          </div>
+            <strong>Signature:</strong> x:&#39;?7193 -&gt; Result&lt;&#39;?7194,&#39;?7193&gt;<br />
+                          <strong>Type parameters:</strong> '?7193, '?7194          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L15-15" class="github-link">
@@ -219,6 +240,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a single value into a two-track result.</p>
+
+
 
         </td>
       </tr>
@@ -229,8 +252,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             failAsync x
           </code>
           <div class="tip" id="9">
-            <strong>Signature:</strong> x:&#39;?6578 -&gt; Async&lt;Result&lt;&#39;?6579,&#39;?6578&gt;&gt;<br />
-                          <strong>Type parameters:</strong> '?6578, '?6579          </div>
+            <strong>Signature:</strong> x:&#39;?7196 -&gt; Async&lt;Result&lt;&#39;?7197,&#39;?7196&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?7196, '?7197          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L19-19" class="github-link">
@@ -238,6 +261,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a single value into a two-track async result.</p>
+
+
 
         </td>
       </tr>
@@ -248,8 +273,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             failureOnly x
           </code>
           <div class="tip" id="10">
-            <strong>Signature:</strong> x:Result&lt;&#39;?6612,&#39;?6613&gt; -&gt; &#39;?6613 option<br />
-                          <strong>Type parameters:</strong> '?6612, '?6613          </div>
+            <strong>Signature:</strong> x:Result&lt;&#39;?7230,&#39;?7231&gt; -&gt; &#39;?7231 option<br />
+                          <strong>Type parameters:</strong> '?7230, '?7231          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L53-53" class="github-link">
@@ -257,6 +282,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Shorthand function to select Failure values, can be used in e.g. List.choose failureOnly.</p>
+
+
 
         </td>
       </tr>
@@ -267,8 +294,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             isFailure x
           </code>
           <div class="tip" id="11">
-            <strong>Signature:</strong> x:Result&lt;&#39;?6606,&#39;?6607&gt; -&gt; bool<br />
-                          <strong>Type parameters:</strong> '?6606, '?6607          </div>
+            <strong>Signature:</strong> x:Result&lt;&#39;?7224,&#39;?7225&gt; -&gt; bool<br />
+                          <strong>Type parameters:</strong> '?7224, '?7225          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L47-47" class="github-link">
@@ -276,6 +303,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Shorthand function to determine if a result is a Failure, can be used in e.g. List.exists isFailure.</p>
+
+
 
         </td>
       </tr>
@@ -286,8 +315,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             isSuccess x
           </code>
           <div class="tip" id="12">
-            <strong>Signature:</strong> x:Result&lt;&#39;?6603,&#39;?6604&gt; -&gt; bool<br />
-                          <strong>Type parameters:</strong> '?6603, '?6604          </div>
+            <strong>Signature:</strong> x:Result&lt;&#39;?7221,&#39;?7222&gt; -&gt; bool<br />
+                          <strong>Type parameters:</strong> '?7221, '?7222          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L44-44" class="github-link">
@@ -295,6 +324,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Shorthand function to determine if a result is a Success, can be used in e.g. List.exists isSuccess.</p>
+
+
 
         </td>
       </tr>
@@ -305,8 +336,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             lift f result
           </code>
           <div class="tip" id="13">
-            <strong>Signature:</strong> f:(&#39;?6623 -&gt; &#39;?6624) -&gt; result:Result&lt;&#39;?6623,&#39;?6625 list&gt; -&gt; Result&lt;&#39;?6624,&#39;?6625 list&gt;<br />
-                          <strong>Type parameters:</strong> '?6623, '?6624, '?6625          </div>
+            <strong>Signature:</strong> f:(&#39;?7241 -&gt; &#39;?7242) -&gt; result:Result&lt;&#39;?7241,&#39;?7243 list&gt; -&gt; Result&lt;&#39;?7242,&#39;?7243 list&gt;<br />
+                          <strong>Type parameters:</strong> '?7241, '?7242, '?7243          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L75-75" class="github-link">
@@ -315,6 +346,8 @@ Assumes ctor looks like: let createWithCont success failure value =</p>
             </a>
           <p>Given a function that transforms a value,
 apply it only if the result is on the Success branch.</p>
+
+
 
         </td>
       </tr>
@@ -325,8 +358,8 @@ apply it only if the result is on the Success branch.</p>
             map f
           </code>
           <div class="tip" id="14">
-            <strong>Signature:</strong> f:(&#39;?6593 -&gt; &#39;?6594) -&gt; Result&lt;&#39;?6593,&#39;?6595&gt; -&gt; Result&lt;&#39;?6594,&#39;?6595&gt;<br />
-                          <strong>Type parameters:</strong> '?6593, '?6594, '?6595          </div>
+            <strong>Signature:</strong> f:(&#39;?7211 -&gt; &#39;?7212) -&gt; Result&lt;&#39;?7211,&#39;?7213&gt; -&gt; Result&lt;&#39;?7212,&#39;?7213&gt;<br />
+                          <strong>Type parameters:</strong> '?7211, '?7212, '?7213          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L35-35" class="github-link">
@@ -334,6 +367,8 @@ apply it only if the result is on the Success branch.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a one-track function into a two-track function.</p>
+
+
 
         </td>
       </tr>
@@ -344,8 +379,8 @@ apply it only if the result is on the Success branch.</p>
             mapMessages f result
           </code>
           <div class="tip" id="15">
-            <strong>Signature:</strong> f:(&#39;?6615 -&gt; &#39;?6616) -&gt; result:Result&lt;&#39;?6617,&#39;?6615 list&gt; -&gt; Result&lt;&#39;?6617,&#39;?6616 list&gt;<br />
-                          <strong>Type parameters:</strong> '?6615, '?6616, '?6617          </div>
+            <strong>Signature:</strong> f:(&#39;?7233 -&gt; &#39;?7234) -&gt; result:Result&lt;&#39;?7235,&#39;?7233 list&gt; -&gt; Result&lt;&#39;?7235,&#39;?7234 list&gt;<br />
+                          <strong>Type parameters:</strong> '?7233, '?7234, '?7235          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L56-56" class="github-link">
@@ -353,6 +388,8 @@ apply it only if the result is on the Success branch.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Map the messages to a different error type.</p>
+
+
 
         </td>
       </tr>
@@ -363,8 +400,8 @@ apply it only if the result is on the Success branch.</p>
             succeed x
           </code>
           <div class="tip" id="16">
-            <strong>Signature:</strong> x:&#39;?6572 -&gt; Result&lt;&#39;?6572,&#39;?6573&gt;<br />
-                          <strong>Type parameters:</strong> '?6572, '?6573          </div>
+            <strong>Signature:</strong> x:&#39;?7190 -&gt; Result&lt;&#39;?7190,&#39;?7191&gt;<br />
+                          <strong>Type parameters:</strong> '?7190, '?7191          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L11-11" class="github-link">
@@ -372,6 +409,8 @@ apply it only if the result is on the Success branch.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a single value into a two-track result.</p>
+
+
 
         </td>
       </tr>
@@ -382,8 +421,8 @@ apply it only if the result is on the Success branch.</p>
             successOnly x
           </code>
           <div class="tip" id="17">
-            <strong>Signature:</strong> x:Result&lt;&#39;?6609,&#39;?6610&gt; -&gt; &#39;?6609 option<br />
-                          <strong>Type parameters:</strong> '?6609, '?6610          </div>
+            <strong>Signature:</strong> x:Result&lt;&#39;?7227,&#39;?7228&gt; -&gt; &#39;?7227 option<br />
+                          <strong>Type parameters:</strong> '?7227, '?7228          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L50-50" class="github-link">
@@ -391,6 +430,8 @@ apply it only if the result is on the Success branch.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Shorthand function to select Success values, can be used in e.g. List.choose successOnly.</p>
+
+
 
         </td>
       </tr>
@@ -401,8 +442,8 @@ apply it only if the result is on the Success branch.</p>
             switch f
           </code>
           <div class="tip" id="18">
-            <strong>Signature:</strong> f:(&#39;?6589 -&gt; &#39;?6590) -&gt; &#39;?6589 -&gt; Result&lt;&#39;?6590,&#39;?6591&gt;<br />
-                          <strong>Type parameters:</strong> '?6589, '?6590, '?6591          </div>
+            <strong>Signature:</strong> f:(&#39;?7207 -&gt; &#39;?7208) -&gt; &#39;?7207 -&gt; Result&lt;&#39;?7208,&#39;?7209&gt;<br />
+                          <strong>Type parameters:</strong> '?7207, '?7208, '?7209          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L32-32" class="github-link">
@@ -410,6 +451,8 @@ apply it only if the result is on the Success branch.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a one-track function into a switch.</p>
+
+
 
         </td>
       </tr>
@@ -420,8 +463,8 @@ apply it only if the result is on the Success branch.</p>
             tee f x
           </code>
           <div class="tip" id="19">
-            <strong>Signature:</strong> f:(&#39;?6597 -&gt; unit) -&gt; x:&#39;?6597 -&gt; &#39;?6597<br />
-                          <strong>Type parameters:</strong> '?6597          </div>
+            <strong>Signature:</strong> f:(&#39;?7215 -&gt; unit) -&gt; x:&#39;?7215 -&gt; &#39;?7215<br />
+                          <strong>Type parameters:</strong> '?7215          </div>
         </td>
         <td class="xmldoc">
             <a href="http://github.com/exira/error-handling/tree/master/src/Exira.ErrorHandling/ErrorHandling.fs#L38-38" class="github-link">
@@ -429,6 +472,8 @@ apply it only if the result is on the Success branch.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Convert a dead-end function into a one-track function.</p>
+
+
 
         </td>
       </tr>
