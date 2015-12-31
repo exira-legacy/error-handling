@@ -1,5 +1,5 @@
 #### 0.2 - December 29 2015
-* NuGet package is now targeting .NET 4.5, 4.5.2, 4.6 and 4.6.1
+* NuGet package is now targeting .NET 4.5, 4.5.1, 4.5.2, 4.6 and 4.6.1
 
 #### 0.1 - September 30 2015
 * Switch everything over to our TeamCity/Octopus Deploy infrastructure
